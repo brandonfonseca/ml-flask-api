@@ -34,11 +34,11 @@ def img_classification():
         ret_obj["Message"] = "Please ensure a valid image url is passed in the payload."
 
     elif float(confidence) > 50:
-        ret_obj["Prediction"] = prediction
-        ret_obj["Confidence"] = confidence + " %"
+        ret_obj["prediction"] = prediction
+        ret_obj["confidence"] = confidence + " %"
 
     else:
-        ret_obj["Message"] = "Sorry, I am unsure what this image is. Please make sure the image falls into 1 of the following 10 categories: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck"
+        ret_obj["message"] = "Sorry, I am unsure what this image is. Please make sure the image falls into 1 of the following 10 categories: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck"
 
     return jsonify(ret_obj)
 

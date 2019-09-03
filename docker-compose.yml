@@ -12,7 +12,7 @@ services:
       - "8000:8000"
     expose:
       - "8000"
-    volumes: ['./api:/api']
+    volumes: ['./api:/api', './run_tests.py:/run_tests.py']
 
   db:
     container_name: ml-db

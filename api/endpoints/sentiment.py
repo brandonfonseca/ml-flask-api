@@ -16,10 +16,10 @@ def sentiment():
     ret_obj = {}
     prediction, status = get_pred(payload)
     if status:
-        ret_obj["Sentence"] = payload["sentence"]
-        ret_obj["Prediction"] = prediction
+        ret_obj["sentence"] = payload["sentence"]
+        ret_obj["prediction"] = prediction
     else:
-        ret_obj["Message"] = prediction
+        ret_obj["message"] = prediction
     return jsonify(ret_obj)
 
 

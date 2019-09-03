@@ -118,4 +118,20 @@ I built this model using the FastAI.text open source library on top of PyTorch. 
 This model achieved a validation accuracy of ~93%.
 
 If you would like to see the code implemenation of this model please refer to the following ipynb notebook:
-https://github.com/brandonfonseca/sentiment-analysis-stanford/tree/master 
+https://github.com/brandonfonseca/sentiment-analysis-stanford/tree/master
+
+## Database Support
+
+You will notice that there is a docker container configured for a MYSQL database. As of right now, this database is not being used, however I have left it in the project so that future endpoints can use it if needed.
+
+## Running Tests
+
+This project has been equipped with automated unittests to ensure code quality before deploying to a production environment. 
+
+Steps to run tests:
+
+1. Ensure that the docker containers are running
+2. Open a new terminal window and run the following command to shell into the ml-api container: ` docker exec -it ml-api /bin/bash
+3. Run the following command to run the tests: `python3 run_tests.py`
+
+If all of the tests successfully pass you should see the following output in the terminal: `OK`
