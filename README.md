@@ -135,3 +135,23 @@ Steps to run tests:
 3. Run the following command to run the tests: `python3 run_tests.py`
 
 If all of the tests successfully pass you should see the following output in the terminal: `OK`
+
+## Logging
+
+Since regular `print` statements won't print to terminal in a Docker/Flask/Gunicorn API, we need an alternate way to log outputs to terminal for debugging:
+
+
+First, add `--log-level=debug` to gunicorn startup in the `Dockerfile`:
+```
+["gunicorn", "-w", "1", "-b", ":8000", "-t", "360", "--reload", "api.wsgi:app", "--log-level=debug"] 
+```
+You can log in app.py using:
+```
+app.logger.info("Your log message")
+```
+
+Or in a blueprint, using:
+```
+from flask import current_app
+current_app.logger.info("Your log message")
+```
