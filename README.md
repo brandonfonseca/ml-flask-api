@@ -118,3 +118,4 @@ I built this model using the FastAI.text open source library on top of PyTorch. 
 This model achieved a validation accuracy of ~93%.
 
 If you would like to see the code implemenation of this model please refer to the following ipynb notebook:
+https://github.com/brandonfonseca/sentiment-analysis-stanford/tree/master 
