@@ -3,7 +3,7 @@ Production ready API built using Flask inside of a Docker container. Gunicorn is
 
 ## Utilization
 
-If you simply want to use the endpoints and have no interest in installing the API locally, then you can simply query (using a POST request) the API using the following URL: `http://34.66.48.23:8000`. If you choose to use the API this way then you can skip the `Installation Instructions` portion of this README.
+Conveniently, I have deployed the API to a GCP instance. If you simply want to use the endpoints and have no interest in installing the API locally, then you can use the deployed version of the API simply by querying (using a POST request) the API using the following URL: `http://34.66.48.23:8000`. If you choose to use the API this way then you can skip the `Installation Instructions` portion of this README.
 
 ### Usage Example - Sentiment Analysis Endpoint:
 
