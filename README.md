@@ -136,7 +136,7 @@ Steps to run tests:
 
 If all of the tests successfully pass you should see the following output in the terminal: `OK`
 
-## Logging
+## Logging output to terminal for debugging
 
 Since regular `print` statements won't print to terminal in a Docker/Flask/Gunicorn API, we need an alternate way to log outputs to terminal for debugging:
 
