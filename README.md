@@ -7,7 +7,7 @@ Conveniently, I have deployed the API to a GCP instance. If you simply want to u
 
 ### Usage Example - Sentiment Analysis Endpoint:
 
-**POST Request URL:** http://34.66.48.23:8000/sentiment
+**POST Request URL:** `http://34.66.48.23:8000/sentiment`
 
 **POST Request JSON Payload:**
 ```
