@@ -1,6 +1,30 @@
 # ML-Flask-API
 Production ready API built using Flask inside of a Docker container. Gunicorn is used as the WSGI which allows the Flask app to be production ready.
 
+## Utilization
+
+If you simply want to use the endpoints and have no interest in installing the API locally, then you can simply query the API using the following URL: `http://34.66.48.23:8000`. If you choose to use the API this way then you can skip the `Installation Instructions` portion of this README.
+
+### Usage Example - Sentiment Analysis Endpoint:
+
+**POST Request URL:** http://34.66.48.23:8000/sentiment
+
+**POST Request JSON Payload:**
+```
+{
+    "sentence": "You are an incredible person and I love everything about you"
+}
+``` 
+
+**JSON Response:**
+
+```
+{
+    "prediction": "Positive",
+    "sentence": "You are an incredible person and I love everything about you"
+}
+```
+
 
 # Installation Instructions
 
