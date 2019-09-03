@@ -2,7 +2,7 @@
 Production ready API built using Flask inside of a Docker container. Gunicorn is used as the WSGI which allows the Flask app to be production ready.
 
 
-#Installation Instructions
+# Installation Instructions
 
 1. Sign up for a free Docker account and install Docker on your machine using the following link:
 https://hub.docker.com/signup . After Docker is installed ensure that at least 4gb of ram is allocated to the containers using the Docker preferences pane. Then, start the Docker service.
