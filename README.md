@@ -58,7 +58,7 @@ This endpoint predicts whether an image falls into 1 of the 10 following categor
 To obtain an image URL simply Google Image search your query, select the image you want classified, right click this image, then press "Copy Image Address"
 ```
 {
-    "img_url": "https://www.medicalnewstoday.com/content//images/articles/322/322868/golden-retriever-puppy.jpg"
+    "img_url": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234558/Chinook-On-White-03.jpg"
 }
 ```
 
