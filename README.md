@@ -155,7 +155,7 @@ This project has been equipped with automated unittests to ensure code quality b
 Steps to run tests:
 
 1. Ensure that the docker containers are running
-2. Open a new terminal window and run the following command to shell into the ml-api container: ` sudo docker exec -it ml-api /bin/bash
+2. Open a new terminal window and run the following command to shell into the ml-api container: `sudo docker exec -it ml-api /bin/bash`
 3. Run the following command to run the tests: `python3 run_tests.py`
 
 If all of the tests successfully pass you should see the following output in the terminal: `OK`
