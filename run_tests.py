@@ -1,3 +1,5 @@
+# Helper script for running automated unittests
+
 import unittest
 print("Running all tests...")
 loader = unittest.TestLoader()
