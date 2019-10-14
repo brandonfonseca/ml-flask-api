@@ -31,7 +31,7 @@ Conveniently, I have deployed the API to a GCP instance. If you simply want to u
 1. Sign up for a free Docker account and install Docker on your machine using the following link:
 https://hub.docker.com/signup . After Docker is installed ensure that at least 4gb of ram is allocated to the containers using the Docker preferences pane. Then, start the Docker service.
 
-2. Clone this repository to your local machine. Before cloning, please ensure that you have Git LFS (large file system) configured on your machine. Git LFS needed to be used as some of the models exceeded the maximum size allowed by default on GitHub.  
+2. Clone this repository to your local machine. Before cloning, please ensure that you have Git LFS (large file system) configured on your machine. Git LFS needed to be used as some of the models exceeded the maximum size allowed by default for pushes on GitHub. 
 3. Navigate to the root directory of this project and run the following command in your terminal: `docker-compose build`. This will build the docker containers for the Flask API and MYSQL database. All necessary dependencies will be installed. The initial build will take a little while (~ 15 minutes)
 4. After the build is completed run the following command in your terminal: `docker-compose up`. This will activate the docker containers and allow them to be queried.
 5. Now that the docker containers are up you should now be able to query the endpoints.
