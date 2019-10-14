@@ -3,11 +3,11 @@ Production ready API built using Flask inside of a Docker container. Gunicorn is
 
 ## Utilization
 
-If you simply want to use the endpoints and have no interest in installing the API locally, then you can simply query the API using the following URL: `http://34.66.48.23:8000`. If you choose to use the API this way then you can skip the `Installation Instructions` portion of this README.
+Conveniently, I have deployed the API to a GCP instance. If you simply want to use the endpoints and have no interest in installing the API locally, then you can use the deployed version of the API simply by querying (using a POST request) the API using the following URL: `http://130.211.208.0:8000`. If you choose to use the API this way then you can skip the `Installation Instructions` portion of this README.
 
 ### Usage Example - Sentiment Analysis Endpoint:
 
-**POST Request URL:** http://34.66.48.23:8000/sentiment
+**POST Request URL:** `http://130.211.208.0:8000/sentiment`
 
 **POST Request JSON Payload:**
 ```
@@ -31,7 +31,7 @@ If you simply want to use the endpoints and have no interest in installing the A
 1. Sign up for a free Docker account and install Docker on your machine using the following link:
 https://hub.docker.com/signup . After Docker is installed ensure that at least 4gb of ram is allocated to the containers using the Docker preferences pane. Then, start the Docker service.
 
-2. Clone this repository to your local machine.
+2. Clone this repository to your local machine. Before cloning, please ensure that you have Git LFS (large file system) configured on your machine. Git LFS needed to be used as some of the models exceeded the maximum size allowed by default on GitHub.  
 3. Navigate to the root directory of this project and run the following command in your terminal: `docker-compose build`. This will build the docker containers for the Flask API and MYSQL database. All necessary dependencies will be installed. The initial build will take a little while (~ 15 minutes)
 4. After the build is completed run the following command in your terminal: `docker-compose up`. This will activate the docker containers and allow them to be queried.
 5. Now that the docker containers are up you should now be able to query the endpoints.
@@ -58,7 +58,7 @@ This endpoint predicts whether an image falls into 1 of the 10 following categor
 To obtain an image URL simply Google Image search your query, select the image you want classified, right click this image, then press "Copy Image Address"
 ```
 {
-    "img_url": "https://www.medicalnewstoday.com/content//images/articles/322/322868/golden-retriever-puppy.jpg"
+    "img_url": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234558/Chinook-On-White-03.jpg"
 }
 ```
 
@@ -155,7 +155,7 @@ This project has been equipped with automated unittests to ensure code quality b
 Steps to run tests:
 
 1. Ensure that the docker containers are running
-2. Open a new terminal window and run the following command to shell into the ml-api container: ` docker exec -it ml-api /bin/bash
+2. Open a new terminal window and run the following command to shell into the ml-api container: `sudo docker exec -it ml-api /bin/bash`
 3. Run the following command to run the tests: `python3 run_tests.py`
 
 If all of the tests successfully pass you should see the following output in the terminal: `OK`
