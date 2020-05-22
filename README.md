@@ -5,8 +5,6 @@ Production ready API built using Flask inside of a Docker container. Gunicorn is
 
 ### Usage Example - Sentiment Analysis Endpoint:
 
-**POST Request URL:** `http://130.211.208.0:8000/sentiment`
-
 **POST Request JSON Payload:**
 ```
 {
